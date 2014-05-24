@@ -26,9 +26,14 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		clean: {
+			dist: {
+				src: ['dist']
+			}
+		},
 		uglify: {
 			options: {
-				banner: '/*!\n * Entropizer - <%= pkg.version %>\n * Built: <%= grunt.template.today("yyyy-mm-dd HH:MM") %>\n * https://github.com/jreesuk/entropizer\n * \n * Copyright (c) 2014 Jonathan Rees\n */\n',
+				banner: '/*!\n * Entropizer - <%= pkg.version %>\n * Built: <%= grunt.template.today("yyyy-mm-dd HH:MM") %>\n * https://github.com/jreesuk/entropizer\n * \n * Copyright (c) 2014 Jonathan Rees\n * Licensed under the MIT License\n */\n',
 			},
 			dist: {
 				src: ['src/**/*.js'],
@@ -38,9 +43,10 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['jshint', 'jasmine', 'uglify']);
+	grunt.registerTask('default', ['jshint', 'jasmine', 'clean', 'uglify']);
 }
