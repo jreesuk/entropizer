@@ -28,7 +28,7 @@
     "regexp": false,
     "undef": true,
     "sub": true,
-    "strict": false,
+    "strict": true,
     "white": true,
     "unused": true
 }

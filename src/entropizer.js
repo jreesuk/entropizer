@@ -1,4 +1,5 @@
 (function() {
+	'use strict';
 
 	var defaultClasses = ['lowercase', 'uppercase', 'numeric', 'symbolsCommon', 'symbolsUncommon'],
 		symbolsCommon = ' ,.?!',

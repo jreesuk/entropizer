@@ -1,5 +1,6 @@
 define(['entropizer'], function(Entropizer) {
-
+	'use strict';
+	
 	describe('entropizer', function() {
 	
 		describe('API', function() {

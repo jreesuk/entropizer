@@ -1,6 +1,6 @@
 {
 	"name": "entropizer",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"devDependencies": {
 		"grunt-template-jasmine-requirejs": "~0.2.0",
 		"grunt-contrib-jshint": "~0.10.0",
