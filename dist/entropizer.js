@@ -1,3 +1,11 @@
+/*!
+ * Entropizer - 0.1.0
+ * Built: 2014-05-24 22:17
+ * https://github.com/jreesuk/entropizer
+ * 
+ * Copyright (c) 2014 Jonathan Rees
+ * Licensed under the MIT License
+ */
 (function() {
 	'use strict';
 

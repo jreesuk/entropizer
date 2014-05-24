@@ -71,7 +71,7 @@ var entropizer = new Entropizer({
 });
 ```
 
-You can also add custom character classes to `Entropizer.classes` and reference them by name.
+You can mix and match these different ways of defining character classes. You can also add your custom character classes to `Entropizer.classes` and reference them by name.
 
 ## Still confused?
 

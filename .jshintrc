@@ -6,7 +6,8 @@
         "it": true,
         "expect": true,
         "define": true,
-        "require": true
+        "require": true,
+        "module": true
     },
     "browser" : true,
     "boss" : false,
