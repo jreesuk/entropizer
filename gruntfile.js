@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 			}
 		},
 		jasmine: {
-			src: ['src/**/*.js'],
+			src: ['dist/entropizer.min.js'],
 			options: {
 				specs: ['test/**/*.js']
 			}
