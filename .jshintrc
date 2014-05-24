@@ -4,7 +4,9 @@
         "console": true,
         "describe": true,
         "it": true,
-        "expect": true
+        "expect": true,
+        "define": true,
+        "require": true
     },
     "browser" : true,
     "boss" : false,

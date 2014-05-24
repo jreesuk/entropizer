@@ -14,19 +14,25 @@ module.exports = function(grunt) {
 			},
 			src: ['src/**/*.js', 'test/**/*.js']
 		},
-		uglify: {
+		jasmine: {
+			src: ['src/**/*.js'],
 			options: {
-				banner: '/*! Entropizer v0.1\nCopyright 2014 Jonathan Rees */\n'
-			},
-			dist: {
-				src: 'src/entropizer/entropizer.js',
-				dest: 'dist/entropizer.min.js'
+				specs: ['test/**/*.js'],
+				template: require('grunt-template-jasmine-requirejs'),
+				templateOptions: {
+					requireConfig: {
+						baseUrl: ''
+					}
+				}
 			}
 		},
-		jasmine: {
-			src: ['dist/entropizer.min.js'],
+		uglify: {
 			options: {
-				specs: ['test/**/*.js']
+				banner: '/*!\n * Entropizer - <%= pkg.version %>\n * Built: <%= grunt.template.today("yyyy-mm-dd HH:MM") %>\n * https://github.com/jreesuk/entropizer\n * \n * Copyright (c) 2014 Jonathan Rees\n */\n',
+			},
+			dist: {
+				src: ['src/**/*.js'],
+				dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.min.js'
 			}
 		}
 	});
