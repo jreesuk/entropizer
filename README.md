@@ -1,4 +1,6 @@
-# Entropizer: entropy-based password strength meter
+# Entropizer
+
+Tiny entropy-based password strength meter
 
 ## What is entropy and why should I care?
 
@@ -8,7 +10,7 @@ them to crack your password by brute force.
 
 Entropy is expressed in *bits* - this is a way of representing these huge numbers of combinations in a more accessible form.
 It's defined as the logarithm (base 2) of the number of combinations - as such, an 80-bit password isn't twice as strong as
-a 40-bit password, it's 2^40 (about a trillion) times stronger.
+a 40-bit password, it's 2<sup>40</sup> (about a trillion) times stronger.
 
 A lot of password meters still use basic criteria such as minimum length, number and symbol requirements etc. This is inadequate
 and results in [weak, forgettable passwords](http://xkcd.com/936/). Entropy is a much more reliable measure of password strength.
@@ -32,7 +34,7 @@ var entropizer = new Entropizer();
 var entropy = entropizer.evaluate('password123');
 ```
 
-Specifying preset character classes (lowercase, uppercase, numeric, symbols, symbolsCommon, symbolsUncommon, hexadecimal):
+Specifying preset character classes (`lowercase`, `uppercase`, `numeric`, `symbols`, `symbolsCommon`, `symbolsUncommon`, `hexadecimal`):
 
 ```js
 // Using names
