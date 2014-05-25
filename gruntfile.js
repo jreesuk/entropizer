@@ -72,7 +72,7 @@ module.exports = function(grunt) {
 				sourceMappingURL: '<%= pkg.name %>.min.map'
 			},
 			dist: {
-				src: ['dist/entropizer.js'],
+				src: ['dist/<%= pkg.name %>.js'],
 				dest: 'dist/<%= pkg.name %>.min.js'
 			}
 		}
