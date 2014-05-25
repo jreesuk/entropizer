@@ -1,6 +1,6 @@
 /*!
- * Entropizer - 0.1.0
- * Built: 2014-05-25 14:10
+ * Entropizer - 0.1.1
+ * Built: 2014-05-25 19:56
  * https://github.com/jreesuk/entropizer
  * 
  * Copyright (c) 2014 Jonathan Rees
@@ -57,12 +57,12 @@
 		if (!password) {
 			return 0;
 		}
-		
+
 		// Find the alphabet of the password (the union of all the classes it uses)
 		for (i = 0; i < this.classes.length; i++) {
 			alphabetSize += this._evaluateClass(this.classes[i], password);
 		}
-		
+
 		// If it's all unknown characters, return 0 instead of -Infinity
 		if (alphabetSize === 0) {
 			return 0;

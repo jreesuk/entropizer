@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 		copy: {
 			main: {
 				src: 'src/entropizer.js',
-				dest: 'dist/entropizer.js'
+				dest: 'dist/<%= pkg.name %>.js'
 			}
 		},
 		usebanner: {
@@ -60,17 +60,20 @@ module.exports = function(grunt) {
 					linebreak: true
 				},
 				files: {
-					src: ['dist/entropizer.js']
+					src: ['dist/<%= pkg.name %>.js']
 				}
 			}
 		},
 		uglify: {
 			options: {
-				preserveComments: 'some'
+				preserveComments: 'some',
+				sourceMap: 'dist/<%= pkg.name %>.min.map',
+				sourceMapRoot: '..',
+				sourceMappingURL: '<%= pkg.name %>.min.map'
 			},
 			dist: {
 				src: ['dist/entropizer.js'],
-				dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.min.js'
+				dest: 'dist/<%= pkg.name %>.min.js'
 			}
 		}
 	});

@@ -1,7 +1,7 @@
 {
 	"name": "entropizer",
 	"description": "Tiny password entropy calculator",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "Jonathan Rees",
 	"homepage": "https://github.com/jreesuk/entropizer",
 	"repository": {
@@ -22,10 +22,10 @@
 	"devDependencies": {
 		"karma-jasmine": "~0.1.5",
 		"karma-requirejs": "~0.2.2",
-		"karma-chrome-launcher": "~0.1.2",
+		"karma-chrome-launcher": "~0.1.4",
 		"karma-firefox-launcher": "~0.1.3",
 		"karma-ie-launcher": "~0.1.5",
-		"grunt-karma": "~0.8.0",
+		"grunt-karma": "~0.8.3",
 		"grunt-template-jasmine-requirejs": "~0.2.0",
 		"grunt-contrib-jshint": "~0.10.0",
 		"grunt-contrib-jasmine": "~0.6.4",
@@ -33,7 +33,7 @@
 		"grunt-contrib-copy": "~0.5.0",
 		"grunt-banner": "~0.2.2",
 		"grunt-contrib-watch": "~0.6.1",
-		"grunt-contrib-uglify": "0.1.1rc6",
-		"grunt": "~0.4.1"
+		"grunt-contrib-uglify": "~0.4.0",
+		"grunt": "~0.4.5"
 	}
 }

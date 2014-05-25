@@ -1,10 +1,12 @@
 # Entropizer
 
-Tiny entropy-based password strength meter
+*Tiny password entropy calculator*
+
+For the jQuery plugin, click [here](https://github.com/jreesuk/jquery-entropizer)
 
 ## What is entropy and why should I care?
 
-Entropy is a measure of disorder. In the context of passwords, it's a measure of how many different password
+*Entropy* is a measure of disorder. In the context of passwords, it's a measure of how many different password
 combinations there are using a certain set of rules. The more combinations an attacker has to check, the longer it will take
 them to crack your password by brute force.
 
@@ -19,7 +21,8 @@ and results in [weak, forgettable passwords](http://xkcd.com/936/). Entropy is a
 Entropizer is a simple, super-lightweight (~1kb minified) library that calculates password entropy. It's easy to set up and customize, and
 comes with several preset character classes. You can also define custom character classes (e.g. for localization).
 
-Entropizer also supports [AMD](http://requirejs.org/) and [CommonJS](http://wiki.commonjs.org/wiki/CommonJS).
+Entropizer supports [AMD](http://requirejs.org/) and [CommonJS](http://wiki.commonjs.org/wiki/CommonJS). It is available
+as an [npm package](https://www.npmjs.org/package/entropizer) and a [bower](http://bower.io/) component.
 
 ## Getting Started
 

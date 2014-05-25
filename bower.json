@@ -1,7 +1,31 @@
 {
 	"name": "entropizer",
-	"version": "0.0.1",
+	"version": "0.1.1",
+	"homepage": "https://github.com/jreesuk/entropizer",
+	"author": "Jonathan Rees",
+	"description": "Tiny password entropy calculator",
+	"main": "dist/entropizer.js",
 	"dependencies": {},
-	"devDependencies": {},
-	"private": true
+	"moduleType": [
+		"amd",
+		"globals",
+		"node"
+	],
+	"keywords": [
+		"password",
+		"strength",
+		"meter",
+		"calculator",
+		"entropy",
+		"bits"
+	],
+	"license": "MIT",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"package.json"
+	]
 }
