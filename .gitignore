@@ -2,6 +2,7 @@
 ## Entropizer
 #################
 
+bower_components/
 node_modules/
 specs/
 

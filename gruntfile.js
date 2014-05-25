@@ -8,6 +8,21 @@ module.exports = function(grunt) {
 				tasks: ['default']
 			}
 		},
+		karma: {
+			unit: {
+				options: {
+					runnerPort: 9876,
+					browsers: ['Chrome', 'Firefox', 'IE'],
+					frameworks: ['requirejs', 'jasmine'],
+					files: [
+                        { pattern: 'src/**/*.js', included: false },
+                        { pattern: 'test/entropizer-tests.js', included: false },
+                        'test/test-main.js'
+					],
+					singleRun: true
+				}
+			}
+		},
 		jshint: {
 			options: {
 				jshintrc: true
@@ -17,7 +32,7 @@ module.exports = function(grunt) {
 		jasmine: {
 			src: ['src/**/*.js'],
 			options: {
-				specs: ['test/**/*.js'],
+				specs: ['test/entropizer-tests.js'],
 				template: require('grunt-template-jasmine-requirejs'),
 				templateOptions: {
 					requireConfig: {
@@ -52,7 +67,6 @@ module.exports = function(grunt) {
 		uglify: {
 			options: {
 				preserveComments: 'some'
-				//banner: '/*!\n * Entropizer - <%= pkg.version %>\n * Built: <%= grunt.template.today("yyyy-mm-dd HH:MM") %>\n * https://github.com/jreesuk/entropizer\n * \n * Copyright (c) 2014 Jonathan Rees\n * Licensed under the MIT License\n */\n'
 			},
 			dist: {
 				src: ['dist/entropizer.js'],
@@ -62,6 +76,7 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-karma');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-clean');

@@ -1,6 +1,6 @@
 /*!
  * Entropizer - 0.1.0
- * Built: 2014-05-24 22:17
+ * Built: 2014-05-25 14:10
  * https://github.com/jreesuk/entropizer
  * 
  * Copyright (c) 2014 Jonathan Rees
@@ -81,7 +81,7 @@
 			return Entropizer;
 		});
 	}
-	// Define global if no AMD
+	// Define global if no module framework
 	else if (typeof window === 'object') {
 		window.Entropizer = Entropizer;
 	}

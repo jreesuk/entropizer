@@ -1,8 +1,10 @@
+/* global describe, it, expect */
+
 define(['entropizer'], function(Entropizer) {
 	'use strict';
-	
+
 	describe('entropizer', function() {
-	
+
 		describe('API', function() {
 
 			it('can be constructed with no parameters', function() {
@@ -118,9 +120,9 @@ define(['entropizer'], function(Entropizer) {
 			});
 
 		});
-		
+
 		describe('evaluation', function() {
-			
+
 			function testEvaluation(password, expectedEntropy) {
 				it('evaluates "' + password + '" as ' + expectedEntropy + ' bits', function() {
 					var entropizer = new Entropizer();

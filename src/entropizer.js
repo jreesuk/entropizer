@@ -49,12 +49,12 @@
 		if (!password) {
 			return 0;
 		}
-		
+
 		// Find the alphabet of the password (the union of all the classes it uses)
 		for (i = 0; i < this.classes.length; i++) {
 			alphabetSize += this._evaluateClass(this.classes[i], password);
 		}
-		
+
 		// If it's all unknown characters, return 0 instead of -Infinity
 		if (alphabetSize === 0) {
 			return 0;
@@ -73,7 +73,7 @@
 			return Entropizer;
 		});
 	}
-	// Define global if no AMD
+	// Define global if no module framework
 	else if (typeof window === 'object') {
 		window.Entropizer = Entropizer;
 	}
