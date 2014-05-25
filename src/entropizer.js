@@ -6,13 +6,13 @@
 		symbolsUncommon = '"£$%^&*()-_=+[]{};:\'@#~<>/\\|`¬¦';
 
 	// Constructor
-	var Entropizer = function(options) {
+	function Entropizer(options) {
 		var classes = (options && options.classes) || defaultClasses;
 		this.classes = [];
 		for (var i = 0; i < classes.length; i++) {
 			this.classes.push(typeof classes[i] === 'string' ? Entropizer.classes[classes[i]] : classes[i]);
 		}
-	};
+	}
 
 	// Preset character classes
 	Entropizer.classes = {
@@ -63,15 +63,15 @@
 		return Math.log(alphabetSize) / Math.log(2) * password.length;
 	};
 
-	// CommonJS module
-	if (typeof module === 'object' && typeof module.exports === 'object') {
-		module.exports = Entropizer;
-	}
 	// AMD module
-	else if (typeof define === 'function' && define.amd) {
-		define('entropizer', [], function() {
+	if (typeof define === 'function' && define.amd) {
+		define([], function() {
 			return Entropizer;
 		});
+	}
+	// CommonJS module
+	else if (typeof module === 'object' && typeof module.exports === 'object') {
+		module.exports = Entropizer;
 	}
 	// Define global if no module framework
 	else if (typeof window === 'object') {
