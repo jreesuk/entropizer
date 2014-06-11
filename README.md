@@ -68,6 +68,10 @@ var entropizer = new Entropizer({
 
 You can mix and match these different ways of defining character classes.
 
+## Browser compatibility
+
+Entropizer supports IE6+, Firefox, Chrome and Opera.
+
 ## Still confused?
 
 Read the source, it's tiny!
