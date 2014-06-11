@@ -1,6 +1,6 @@
 /*!
- * Entropizer - 0.1.2
- * Built: 2014-05-25 22:48
+ * Entropizer - 0.1.3
+ * Built: 2014-06-11 22:42
  * https://github.com/jreesuk/entropizer
  * 
  * Copyright (c) 2014 Jonathan Rees
@@ -42,7 +42,7 @@
 		else if (charClass.characters) {
 			chars = charClass.characters;
 			for (i = 0; i < chars.length; i++) {
-				if (password.indexOf(chars[i]) > -1) {
+				if (password.indexOf(chars.charAt(i)) > -1) {
 					return chars.length;
 				}
 			}

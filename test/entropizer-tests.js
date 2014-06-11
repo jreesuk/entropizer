@@ -61,7 +61,7 @@ define(['entropizer'], function(Entropizer) {
 						'test',
 						'numeric',
 						{ regex: /[ABCD]/, size: 4 },
-						{ characters: '!?' },
+						{ characters: '!?' }
 					]
 				});
 				expect(entropizer.evaluate('aA')).toEqual(6);
@@ -81,7 +81,7 @@ define(['entropizer'], function(Entropizer) {
 						classes: [characterClass]
 					});
 					for (var i = 0; i < characters.length; i++) {
-						expect(entropizer.evaluate(characters[i])).toBeGreaterThan(0);
+						expect(entropizer.evaluate(characters.charAt(i))).toBeGreaterThan(0);
 					}
 				}
 

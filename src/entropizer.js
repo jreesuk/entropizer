@@ -34,7 +34,7 @@
 		else if (charClass.characters) {
 			chars = charClass.characters;
 			for (i = 0; i < chars.length; i++) {
-				if (password.indexOf(chars[i]) > -1) {
+				if (password.indexOf(chars.charAt(i)) > -1) {
 					return chars.length;
 				}
 			}

@@ -71,8 +71,3 @@ You can mix and match these different ways of defining character classes.
 ## Still confused?
 
 Read the source, it's tiny!
-
-## Coming soon
-
-- jQuery UI plugin
-- Dictionary lookups and common mutations
